@@ -1,0 +1,129 @@
+---
+title: Introduction to Unseen
+description: Discover Unseen, a powerful documentation platform designed to help you organize and manage all your project documentation efficiently.
+---
+
+## Overview
+
+Unseen provides a centralized space to create, organize, and collaborate on your project documentation. You build structured docs sites with Markdown, version history, and powerful search. Teams use Unseen to maintain living documentation that stays current across projects.
+
+<Callout kind="info">
+Unseen integrates seamlessly with your Git workflow, so you version control docs alongside code.
+</Callout>
+
+## Key Features
+
+Unseen offers essential tools for documentation management.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="folder" href="/spaces">
+    Group related docs into dedicated spaces for projects, teams, or products.
+  </Card>
+  <Card title="Rich Editor" icon="edit-3">
+    Write in Markdown with live preview, embeds, and custom components.
+  </Card>
+  <Card title="Version Control" icon="git-branch">
+    Track changes with Git integration and rollback to any version.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="/search">
+    Full-text search across all docs with filters and highlighting.
+  </Card>
+</Columns>
+
+## Benefits for Teams and Projects
+
+You streamline documentation workflows, reducing silos and outdated info. Teams collaborate in real-time, with permissions and review workflows. Projects benefit from consistent styling and easy navigation, improving onboarding speed by up to 50%. Use Unseen to scale docs as your project grows, from open-source repos to enterprise knowledge bases.
+
+## Quick Start
+
+Get up and running with Unseen in minutes.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Create a free account at https://app.unseen.com/signup.
+  </Step>
+  <Step title="Create Space" icon="folder-plus">
+    Click "New Space" and name it for your project, like "MyApp Docs".
+  </Step>
+  <Step title="Add First Page" icon="file-plus">
+    Create `introduction.mdx` and start writing.
+  </Step>
+</Steps>
+
+Here is a sample page structure you can copy:
+
+<CodeGroup tabs="Markdown,HTML">
+  ```markdown
+  ---
+  title: My Page
+  description: Page summary
+  ---
+
+  ## Overview
+
+  Welcome to your docs.
+  ```
+  ```html
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <h2>Overview</h2>
+    <p>Welcome to your docs.</p>
+  </body>
+  </html>
+  ```
+</CodeGroup>
+
+## Brand Color and Styling Guidelines
+
+Incorporate Unseen's brand color `#3B82F6` for custom themes.
+
+<Tabs>
+  <Tab title="CSS" icon="css3">
+    ```css
+    :root {
+      --brand-color: #3B82F6;
+    }
+
+    .button {
+      background-color: var(--brand-color);
+      color: white;
+      border-radius: 6px;
+      padding: 12px 24px;
+    }
+    ```
+  </Tab>
+  <Tab title="Tailwind" icon="tailwind">
+    ```html
+    <button class="bg-[#3B82F6] text-white rounded-lg px-6 py-3">
+      Primary Button
+    </button>
+    ```
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+Match your site's primary accent to `#3B82F6` for consistency with Unseen's design system.
+</Callout>
+
+## Next Steps
+
+Dive deeper into Unseen.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first full docs site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your spaces with API keys and OAuth.
+  </Card>
+  <Card title="Advanced Features" icon="settings" href="/configuration">
+    Customize workflows and integrations.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    See what's new in recent releases.
+  </Card>
+</Columns>

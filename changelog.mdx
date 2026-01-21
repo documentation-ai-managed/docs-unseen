@@ -1,0 +1,132 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, features, and improvements in Unseen.
+---
+
+## Recent Releases
+
+Unseen releases new versions regularly to bring you enhanced documentation management, improved collaboration, and better performance. Check this changelog to see what's new, review migration steps, and plan your updates.
+
+Use the `<Update>` components below to explore version history, starting with the most recent.
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for live editing sessions across teams
+- Introduced custom themes with support for your brand color `#3B82F6`
+- New search indexing for instant full-text search across all docs
+
+## Improvements
+
+- Enhanced export options including PDF and Markdown bundles
+- Optimized rendering for pages with heavy Mermaid diagrams
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks
+- Resolved issues with expandable sections not collapsing properly
+
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated API documentation components like `<ParamField>` and `<ResponseField>`
+- Added changelog tracking with `<Update>` components for easy version management
+
+## Bug Fixes
+
+- Patched special character escaping for `{` and `}` in prose text
+- Fixed heading hierarchy enforcement starting from H2 only
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["breaking", "improvement"]}>
+
+## Breaking Changes
+
+- Removed support for H1 headings in MDX body content—use frontmatter titles instead
+- Updated attribute syntax to require double quotes only: `title="Text"`
+
+## Improvements
+
+- Better JSX component validation for parsing error prevention
+- Introduced 5-8 component diversity rule for richer documentation pages
+
+## Bug Fixes
+
+- Corrected Mermaid code block rendering—no more `<Mermaid>` component confusion
+
+</Update>
+
+## Upgrading Unseen
+
+Follow these steps to upgrade to the latest version. Always back up your documentation space first.
+
+<Callout kind="alert">
+  Review breaking changes in each release before upgrading production sites.
+</Callout>
+
+<Steps>
+  <Step title="Backup Your Docs" icon="database">
+    Export your current documentation:
+
+````bash
+npx unseen@current export --output ./backup
+````
+  </Step>
+  <Step title="Update Package" icon="download">
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm install unseen@latest
+````
+````bash
+yarn add unseen@latest
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Migrate Config" icon="settings">
+    Update your config for new features:
+
+````javascript
+// unseen.config.js
+module.exports = {
+  theme: {
+    color: '#3B82F6',
+  },
+  components: {
+    required: 5, // Enforce 5-8 diverse components per page
+  },
+};
+````
+  </Step>
+  <Step title="Deploy and Test" icon="rocket">
+    Redeploy and verify parsing:
+
+````bash
+npx unseen build && npx unseen preview
+````
+  </Step>
+</Steps>
+
+## Upcoming Roadmap
+
+Get a sneak peek at what's coming next. These teasers highlight planned enhancements.
+
+<Columns cols={3}>
+  <Card title="AI Assistance" icon="zap" href="/introduction">
+    Automated content generation and smart suggestions.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart" href="/quickstart">
+    Track doc views, search trends, and engagement metrics.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/authentication">
+    Full Git integration for docs versioning.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap" default-open="false">
+  Watch for beta releases in Q4 2024. Join our community for early access.
+</Expandable>
